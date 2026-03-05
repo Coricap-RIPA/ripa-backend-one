@@ -1,0 +1,7 @@
+# Transmettre l'en-tête Authorization à PHP (Apache ne le fait pas par défaut pour les requêtes réécrites)
+# Nécessaire pour que verify-token et les routes protégées reçoivent le JWT.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>

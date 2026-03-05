@@ -1,0 +1,3 @@
+<center>
+    <h6> LA PLATEFORME EST ACCESSIBLE UNIQUEMENT SUR MOBILE </h6>
+</center>

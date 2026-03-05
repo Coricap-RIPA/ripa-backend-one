@@ -1,0 +1,19 @@
+# RIPA - Fichiers à ne pas versionner (dépôt backend CodeIgniter)
+
+# App mobile (dépôt séparé : ripa-mobileapp)
+mobileapp/
+
+# Variables d'environnement (secrets)
+.env
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs et cache applicatif
+application/logs/*.php
+application/cache/*
+!application/logs/index.html
+!application/cache/index.html

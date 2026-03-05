@@ -1,0 +1,39 @@
+%% RIPA - Flux de données carte (PCI DSS) - À rendre dans Mermaid Live Editor ou outil supportant Mermaid
+%% https://mermaid.live/ ou intégration GitHub/GitLab
+
+flowchart TB
+    subgraph EXTERNE["Périmètre externe (hors CDE)"]
+        APP["Application mobile\n(React Native / Expo)"]
+        BO["Backoffice Web\n(CodeIgniter)"]
+    end
+
+    subgraph CDE["Environnement CDE (RIPA)"]
+        subgraph DMZ_APP["Segment Application"]
+            API["API Backend\n(PHP / CodeIgniter)"]
+        end
+
+        subgraph RESEAU_PRIVE["Réseau privé"]
+            RDS[( "RDS MySQL\n(données métier\n+ token + last4 uniquement)" )]
+            KMS["AWS KMS\n(clés chiffrement)"]
+        end
+
+        subgraph LOGS["Logs & Monitoring"]
+            CW["CloudWatch Logs\n(aucune donnée carte)"]
+            SIEM["SIEM / Centralisation\n(alertes, accès admin)"]
+        end
+    end
+
+    subgraph TIERS["Tiers / Prestataires"]
+        VAULT["Prestataire Tokenisation\n(Vault PCI compliant)\n• Stocke PAN\n• Retourne token"]
+        ONAFRIQ["Onafriq\n• Émission cartes Visa/MC\n• Mobile Money"]
+    end
+
+    APP -->|"HTTPS TLS 1.2+"| API
+    BO -->|"HTTPS TLS 1.2+"| API
+    API -->|"Tokenisation"| VAULT
+    API -->|"Opérations cartes"| ONAFRIQ
+    API --> RDS
+    API --> KMS
+    API --> CW
+    CW --> SIEM
+    KMS -.-> RDS

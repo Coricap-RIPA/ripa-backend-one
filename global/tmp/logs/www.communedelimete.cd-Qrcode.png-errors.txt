@@ -1,0 +1,4621 @@
+2024-02-20 09:03:18: 
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 0.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 140</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 140<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 1.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 140</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 140<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 2.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 140</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 140<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 3.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 140</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 140<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 4.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 140</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 140<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 5.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 140</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 140<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 6.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 140</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 140<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 7.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 140</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 140<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 8.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 140</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 140<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 9.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 140</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 140<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 10.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 140</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 140<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 11.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 140</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 140<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 12.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 140</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 140<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 0.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 1.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 2.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 3.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 4.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 5.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 6.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 7.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 8.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 9.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 10.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 11.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 12.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 13.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 14.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 15.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 16.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 17.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 18.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 19.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 20.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: 8192</p>
+<p>Message:  Implicit conversion from float 21.5 to int loses precision</p>
+<p>Filename: qrcode/qrencode.php</p>
+<p>Line Number: 144</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 144<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 187<br />
+			Function: getCode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 240<br />
+			Function: encodeMask			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 279<br />
+			Function: encodeInput			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 467<br />
+			Function: encodeString			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 485<br />
+			Function: encode			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/third_party/qrcode/qrencode.php<br />
+			Line: 286<br />
+			Function: encodePNG			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Ci_qr_code.php<br />
+			Line: 155<br />
+			Function: png			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 260<br />
+			Function: generate			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 151<br />
+			Function: generate_code_qr			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 957<br />
+			Function: _onRowBeforeInserted			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/libraries/Grocery_CRUD.php<br />
+			Line: 4742<br />
+			Function: db_insert			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/application/controllers/Plaque.php<br />
+			Line: 100<br />
+			Function: render			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /Applications/XAMPP/xamppfiles/htdocs/plaqueintelligente/index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>

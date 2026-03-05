@@ -1,0 +1,38 @@
+---
+description: Règles d'or RIPA - PCI DSS, déploiement AWS, GitHub PR, communication tokenisée
+alwaysApply: true
+---
+
+# RIPA – Règles d'or (à respecter en codant)
+
+## 1. PCI DSS (données carte et sécurité)
+
+- **Données carte** : ne jamais stocker PAN ni CVV. Stocker uniquement **token** (prestataire) + **4 derniers chiffres** (last4). Aucune donnée carte (PAN, CVV, token complet) dans les **logs**.
+- **Secrets** : jamais en dur dans le code. Utiliser variables d'environnement ou secret manager (AWS Secrets Manager en prod).
+- **HTTPS (TLS 1.2+)** partout pour API, app, backoffice. Pas de requêtes HTTP sur les flux carte/auth.
+- **Backend ↔ Application** : communication par **tokenisation** (échange de tokens, pas de PAN en clair). Le backend ne persiste et ne logue que token + last4.
+- Avant tout log : masquer/exclure champs sensibles (PAN, CVV, token complet). Idéalement une fonction `sanitize_for_log()`.
+- Déploiement : pas de modification directe en prod ; migrations versionnées ; scan des dépendances (ex. composer audit) en CI.
+
+## 2. Déploiement AWS (à appliquer au moment du déploiement)
+
+- VPC dédié production ; base (RDS) en subnet **privé**, sans accès public.
+- Security groups en **deny by default** ; séparation couche application / base.
+- Accès admin via **bastion** ou accès sécurisé contrôlé.
+- RDS + backups **chiffrés** ; clés dans **KMS** (séparé de la base).
+- MFA obligatoire pour accès admin ; pas de comptes partagés ; IAM least privilege, pas de wildcard `*`.
+- Logs centralisés (ex. CloudWatch) ; rétention ≥ 1 an ; alertes sur activités suspectes.
+- Détails complets : voir `docs/PCI-DSS-SCOPING-PACK.md` et `docs/PCI-DSS-RESUME-POUR-DEV.md`.
+
+## 3. GitHub et processus de développement
+
+- **Toutes les modifications** passent par une **Pull Request** ; revue obligatoire avant merge.
+- **Pas de commit direct** sur la branche principale (main/master) pour le code CDE (API, cartes, auth).
+- Branche de travail → PR → revue → merge → déploiement via **pipeline** (CI/CD).
+- Au moment du déploiement AWS : fournir la procédure pas à pas (branches, secrets, pipeline, environnements).
+
+## 4. Ordre de développement RIPA
+
+1. **Commencer par l'application mobile** (React Native / Expo) ; fonctionnalités écran par écran.
+2. Ensuite **revoir le backoffice** et le **backend** pour les aligner aux specs et à la tokenisation.
+3. Backend et application **communiquent par tokenisation** (tokens + last4, jamais PAN en clair).

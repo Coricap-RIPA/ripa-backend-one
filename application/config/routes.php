@@ -26,10 +26,23 @@ $route['api/app/profile'] = 'api/apiapp/profile';
 $route['api/app/accounts'] = 'api/apiapp/accounts';
 $route['api/app/accounts/add'] = 'api/apiapp/accounts_add';
 $route['api/app/accounts/types'] = 'api/apiapp/accounts_types';
+$route['api/app/accounts/delete'] = 'api/apiapp/accounts_delete';
+$route['api/app/accounts/update'] = 'api/apiapp/accounts_update';
+$route['api/app/accounts/bank'] = 'api/apiapp/accounts_bank';
+$route['api/app/accounts/bank/add'] = 'api/apiapp/accounts_bank_add';
+$route['api/app/accounts/bank/update'] = 'api/apiapp/accounts_bank_update';
+$route['api/app/accounts/bank/delete'] = 'api/apiapp/accounts_bank_delete';
 $route['api/app/cards'] = 'api/apiapp/cards';
 $route['api/app/cards/register'] = 'api/apiapp/cards_register';
+$route['api/app/cards/order-virtual'] = 'api/apiapp/cards_order_virtual';
+$route['api/app/cards/delete'] = 'api/apiapp/cards_delete';
+$route['api/app/cards/recharge'] = 'api/apiapp/cards_recharge';
+$route['api/app/cards/withdraw'] = 'api/apiapp/cards_withdraw';
 $route['api/app/kyc'] = 'api/apiapp/kyc_get';
 $route['api/app/kyc/submit'] = 'api/apiapp/kyc_submit';
+$route['api/app/transactions/recent'] = 'api/apiapp/transactions_recent';
+$route['api/app/notifications'] = 'api/apiapp/notifications_get';
+$route['api/app/notifications/read'] = 'api/apiapp/notifications_mark_read';
 
 // ===========================
 // ROUTES API - AUTHENTIFICATION (legacy, déprécié – utiliser api/app/*)

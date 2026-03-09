@@ -33,7 +33,7 @@
                         <div class="form-side">
                             <h1> 
                                 <img src="<?php echo base_url('assets/dore_assets/img/logoapp.png') ?>" style="width: 200px; height: 80px; display: inline-block; position: relative; top: -1px;"/>
-                                <b style="color:black; font-size: 20px;"> Le paiment mobile tout en un  </b> 
+                                <b style="color:black; font-size: 20px;"> | Backoffice  </b> 
                                 <br>
                             </h1>
                             <?php

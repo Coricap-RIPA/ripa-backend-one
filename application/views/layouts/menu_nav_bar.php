@@ -89,7 +89,11 @@
                         <a href="<?php echo site_url('Action_utilisateur/index/')  ?>"><b style="font-size:12px;"> <i class="fa fa-file-text"></i> JOURNALS SYSTEMES </b> <a>
                     </li>
                 <?php } ?>
-
+                <?php if (check_privilege('kyc_application', $this->session->user['id_role'], 'voir')) { ?>
+                    <li>
+                        <a href="<?php echo site_url('Kyc_backoffice/index/'); ?>"><b style="font-size:12px;"> <i class="fa fa-id-card"></i> KYC APPLICATION </b> </a>
+                    </li>
+                <?php } ?>
                 <?php if (true) { ?>
                     <li>
                         <a href="<?php echo site_url('Starter/disconnect/'); ?>"><b class="center-text" style="font-size:12px;"> <i class="fa fa-sign-out"></i> DECONNEXION </b> </a>

@@ -41,8 +41,16 @@ $route['api/app/cards/withdraw'] = 'api/apiapp/cards_withdraw';
 $route['api/app/kyc'] = 'api/apiapp/kyc_get';
 $route['api/app/kyc/submit'] = 'api/apiapp/kyc_submit';
 $route['api/app/transactions/recent'] = 'api/apiapp/transactions_recent';
+$route['api/app/transactions/recent-contacts'] = 'api/apiapp/transactions_recent_contacts';
+$route['api/app/transactions/with-contact'] = 'api/apiapp/transactions_with_contact';
+$route['api/app/transactions/history'] = 'api/apiapp/transactions_history';
 $route['api/app/notifications'] = 'api/apiapp/notifications_get';
 $route['api/app/notifications/read'] = 'api/apiapp/notifications_mark_read';
+// Paiement B2C (Scan & Pay, C2C) — Phase 1
+$route['api/app/payment/sources'] = 'api/apiapp/payment_sources';
+$route['api/app/payee/token'] = 'api/apiapp/payee_token';
+$route['api/app/payee/lookup'] = 'api/apiapp/payee_lookup';
+$route['api/app/payment/submit'] = 'api/apiapp/payment_submit';
 
 // ===========================
 // ROUTES API - AUTHENTIFICATION (legacy, déprécié – utiliser api/app/*)

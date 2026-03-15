@@ -64,6 +64,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         return $tel;
     }
 
+    /**
+     * Nettoie un tableau ou une chaîne avant écriture en log (log_utilisateur_application).
+     * Retire ou masque : pan, cvv, token, token_vault, mot de passe, pin, otp.
+     * PCI DSS : ne jamais logger PAN, CVV, token complet, mot de passe.
+     * @param array|string $data
+     * @return array|string Données safe pour les logs
+     */
+    function sanitize_for_log($data) {
+        $sensitive_keys = array('pan', 'cvv', 'pin', 'mot_passe', 'password', 'token', 'token_vault', 'otp', 'otp_code', 'mot_passe_pin');
+        if (is_array($data)) {
+            $out = array();
+            foreach ($data as $k => $v) {
+                $k_lower = is_string($k) ? strtolower($k) : $k;
+                $is_sensitive = false;
+                foreach ($sensitive_keys as $sk) {
+                    if (strpos((string) $k_lower, $sk) !== false) {
+                        $is_sensitive = true;
+                        break;
+                    }
+                }
+                if ($is_sensitive) {
+                    $out[$k] = '[REDACTED]';
+                } elseif (is_array($v) || is_object($v)) {
+                    $out[$k] = sanitize_for_log((array) $v);
+                } else {
+                    $out[$k] = $v;
+                }
+            }
+            return $out;
+        }
+        if (is_string($data)) {
+            return $data;
+        }
+        return $data;
+    }
+
     function action_utilisateur($data, $model){
         $model->add($data);
     }

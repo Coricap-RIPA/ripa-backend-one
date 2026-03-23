@@ -17,3 +17,8 @@ application/logs/*.php
 application/cache/*
 !application/logs/index.html
 !application/cache/index.html
+
+# Config locales (ne pas versionner)
+application/config/database.php
+application/config/config.php
+application/config/business.php

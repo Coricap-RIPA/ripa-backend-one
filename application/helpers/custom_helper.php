@@ -65,6 +65,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     }
 
     /**
+     * Valide une date au format Y-m-d (filtres API, évite entrées malformées).
+     * @param string|null $str
+     * @return string Chaîne Y-m-d ou '' si invalide
+     */
+    function ripa_validate_date_ymd($str) {
+        if ($str === null || $str === '') {
+            return '';
+        }
+        $str = trim((string) $str);
+        if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $str)) {
+            return '';
+        }
+        $d = DateTime::createFromFormat('Y-m-d', $str);
+        if ($d === false || $d->format('Y-m-d') !== $str) {
+            return '';
+        }
+        return $str;
+    }
+
+    /**
      * Nettoie un tableau ou une chaîne avant écriture en log (log_utilisateur_application).
      * Retire ou masque : pan, cvv, token, token_vault, mot de passe, pin, otp.
      * PCI DSS : ne jamais logger PAN, CVV, token complet, mot de passe.
@@ -263,6 +283,76 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $numberPhone = str_replace("0","",$numberPhone);;
         }
         return $numberPhone;
+    }
+
+    // -------------------------------------------------------------------------
+    // CSRF léger — portail marchand (business/*) et formulaires BO marchands
+    // (évite d activer csrf_protection global qui casserait api/* et anciens formulaires)
+    // -------------------------------------------------------------------------
+
+    /**
+     * Génère ou retourne le jeton session pour le portail marchand.
+     * @return string
+     */
+    function ripa_portal_csrf_token() {
+        $CI = &get_instance();
+        $t = $CI->session->userdata('ripa_portal_csrf');
+        if (!is_string($t) || strlen($t) < 16) {
+            $t = bin2hex(random_bytes(16));
+            $CI->session->set_userdata('ripa_portal_csrf', $t);
+        }
+        return $t;
+    }
+
+    /**
+     * Champ hidden pour formulaires portail marchand.
+     * @return string HTML
+     */
+    function ripa_portal_csrf_field() {
+        return '<input type="hidden" name="ripa_portal_csrf" value="' . html_escape(ripa_portal_csrf_token()) . '" />';
+    }
+
+    /**
+     * Vérifie le jeton POST puis en régénère un (usage : une fois par POST réussi).
+     * @return bool
+     */
+    function ripa_portal_csrf_verify() {
+        $CI = &get_instance();
+        $p = $CI->input->post('ripa_portal_csrf');
+        $s = $CI->session->userdata('ripa_portal_csrf');
+        if (!is_string($p) || !is_string($s) || $s === '' || !hash_equals($s, $p)) {
+            return false;
+        }
+        $CI->session->set_userdata('ripa_portal_csrf', bin2hex(random_bytes(16)));
+        return true;
+    }
+
+    /**
+     * Jeton CSRF pour pages back-office (session admin RIPA).
+     */
+    function ripa_bo_csrf_token() {
+        $CI = &get_instance();
+        $t = $CI->session->userdata('ripa_bo_csrf');
+        if (!is_string($t) || strlen($t) < 16) {
+            $t = bin2hex(random_bytes(16));
+            $CI->session->set_userdata('ripa_bo_csrf', $t);
+        }
+        return $t;
+    }
+
+    function ripa_bo_csrf_field() {
+        return '<input type="hidden" name="ripa_bo_csrf" value="' . html_escape(ripa_bo_csrf_token()) . '" />';
+    }
+
+    function ripa_bo_csrf_verify() {
+        $CI = &get_instance();
+        $p = $CI->input->post('ripa_bo_csrf');
+        $s = $CI->session->userdata('ripa_bo_csrf');
+        if (!is_string($p) || !is_string($s) || $s === '' || !hash_equals($s, $p)) {
+            return false;
+        }
+        $CI->session->set_userdata('ripa_bo_csrf', bin2hex(random_bytes(16)));
+        return true;
     }
 
 ?>

@@ -1,7 +1,7 @@
 # RIPA — Spécifications PCI DSS, phases de codage et progression
 
 **Document unique de référence.**  
-**À consulter avant chaque session de codage** : vérifier la section [Progression actuelle](#6-progression-actuelle) et le [focus du moment](#7-focus-du-moment). **Signaler tout écart** par rapport à ce fichier (scope creep, oubli PCI, phase non respectée).
+**À consulter avant chaque session de codage** : vérifier la section [Progression actuelle](#7-progression-actuelle) et le [focus du moment](#8-focus-du-moment). **Signaler tout écart** par rapport à ce fichier (scope creep, oubli PCI, phase non respectée).
 
 ---
 
@@ -66,9 +66,10 @@
 
 | Élément | État |
 |---------|------|
-| Dashboard web | ❌ |
-| Modules (facturation, paiements, payroll, réconciliation, compta) | ❌ |
-| Backoffice | ⚠️ Uniquement KYC (Kyc_backoffice) |
+| **Spécifications portail marchand** | 📋 **`docs/SPECS-PORTAIL-MARCHAND-B2B.md`** — modèle BDD v1, onboarding + validation RIPA, phases de codage, PCI |
+| Dashboard web marchand (CodeIgniter) | ❌ À implémenter (`controllers/models/views/business/`) |
+| Modules (facturation, payroll, réconciliation, compta avancée) | ❌ Hors v1 portail ; Laravel ou extensions ultérieures |
+| Backoffice | ⚠️ KYC (`Kyc_backoffice`) + **à ajouter** : file validation comptes marchands |
 
 ### 3.3 RIPA API — Plateforme ouverte
 
@@ -97,19 +98,28 @@
 
 ## 5. Phase 2 — RIPA for Business (nouveau produit)
 
-**Objectif** : Livrer le cockpit PME (recommandation : Laravel, monolithe modulaire).
+**Objectif** : Livrer le **cockpit marchand** puis, à terme, le cockpit PME complet.
 
-- [ ] **Nouveau projet** : application web B2B (Laravel), auth entreprise, modules distincts.
-- [ ] **Ordre suggéré** :  
-  1. Facturation & Devis (DGI, QR « Payez avec RIPA », lien de paiement).  
-  2. Paiements Business (encaissements QR/lien, décaissements, trésorerie).  
-  3. Réconciliation (lien facture ↔ paiement, statut « Payée »).  
-  4. Payroll (salaires vers wallets RIPA, création wallet employé).  
-  5. Comptabilité SYSCOHADA (écritures, plan OHADA, rapports, export).
+**Mise à jour stratégie (2026)** : la **première vague** cible le **portail marchand dans le back-office CodeIgniter** existant (dossiers `application/controllers/business/`, `application/models/business/`, `application/views/business/`), avec **onboarding** et **validation manuelle** par l’équipe RIPA. Détail : **`docs/SPECS-PORTAIL-MARCHAND-B2B.md`**.
+
+- [ ] **Vague A — Portail marchand (CodeIgniter)**  
+  - Schéma SQL minimal : `business_marchand`, **`utilisateur_business`** (auth portail + rattachement marchand ; admin créé à la validation, MDP provisoire + changement 1ʳᵉ connexion), `business_service`, `business_moyen_lien` (voir `docs/SPECS-PORTAIL-MARCHAND-B2B.md`).  
+  - Interface marchand : demande de compte + dashboard si `actif`.  
+  - Back-office : file d’attente **Valider / Refuser** les demandes.  
+  - Membres, services, puis moyens de paiement (réutilisation logique B2C / KYC / tokenisation).  
+  - QR & liens : **mêmes principes** que l’app (`SPECS-PAIEMENT-B2C-INTEROPERABILITE.md`).
+- [ ] **Vague B — ERP étendu (option Laravel)** : monolithe modulaire si décision produit — facturation DGI, réconciliation SYSCOHADA, payroll avancé, etc.
+- [ ] **Ordre suggéré (global)** :  
+  1. Onboarding marchand + validation RIPA (**P0**, specs).  
+  2. Membres & droits (rôles type back-office).  
+  3. Services + liaison moyens de paiement + reporting transactions.  
+  4. Facturation & Devis (DGI, QR « Payez avec RIPA », lien de paiement).  
+  5. Paiements Business (encaissements, décaissements, trésorerie).  
+  6. Réconciliation, payroll, comptabilité OHADA (selon vague B).
 - [ ] **Intégration B2C** : Lien « Payez avec RIPA » → App RIPA + API de paiement ; côté app, écran « Paiement de facture ».
-- [ ] **PCI DSS** : Mêmes règles (pas de PAN/CVV stockés ; tokenisation ; logs sanitized ; HTTPS ; secrets en env).
+- [ ] **PCI DSS** : Mêmes règles sur **tout** le portail web marchand (pas de PAN/CVV stockés ; tokenisation ; logs sanitized ; HTTPS ; secrets en env).
 
-**Livrable** : Dashboard B2B opérationnel (au minimum facturation + paiements + réconciliation).
+**Livrable court terme** : compte marchand validable depuis le back-office + socle technique `business/` + tables v1. **Livrable moyen terme** : dashboard marchand opérationnel (membres, services, moyens de paiement, lecture transactions).
 
 ---
 
@@ -126,19 +136,19 @@
 
 ---
 
-## 6. Progression actuelle
+## 7. Progression actuelle
 
-**Dernière mise à jour** : à mettre à jour à chaque avancement.
+**Dernière mise à jour** : 2026-03-14 — specs portail marchand + alignement Phase 2.
 
 | Phase | Statut | Commentaire |
 |-------|--------|-------------|
 | Phase 1 — B2C | En cours | Backend paiement B2C livré : payment/sources, payee/token, payee/lookup, payment/submit ; tables ripa_payee_token, transaction_paiement_ripa. Prochaine étape : écrans app Payer. |
-| Phase 2 — B2B | Non démarrée | Attente décision Laravel + ordre des modules. |
-| Phase 3 — RIPA API | Non démarrée | Après Phase 2. |
+| Phase 2 — B2B | **Démarré** | SQL `14_` + `15_` (tables + permission back-office). Code : `controllers/business/*`, `Business_marchand_backoffice`, modèles `models/business/`, vues `views/business/*` + `views/business_backoffice/`. Flux : inscription publique → validation BO → compte `utilisateur_business` + 1ʳᵉ connexion changement MDP. |
+| Phase 3 — RIPA API | Non démarrée | Après consolidation B2B / besoin tiers. |
 
 **Checklist avant de coder (à cocher mentalement ou en revue)** :
 
-- [ ] J’ai consulté ce fichier et la section [Progression actuelle](#6-progression-actuelle) + [Focus du moment](#7-focus-du-moment).
+- [ ] J’ai consulté ce fichier et la section [Progression actuelle](#7-progression-actuelle) + [Focus du moment](#8-focus-du-moment).
 - [ ] Mon travail correspond à la phase et au périmètre décrits (pas d’écart de scope).
 - [ ] Je n’introduis pas de donnée carte (PAN/CVV) en base ni en log.
 - [ ] Les secrets restent en config / env, pas en dur.
@@ -146,29 +156,30 @@
 
 ---
 
-## 7. Focus du moment
+## 8. Focus du moment
 
 **À remplir et à mettre à jour** à chaque début de session ou de sprint.
 
-- **Phase concernée** : Phase 1 — B2C
-- **Objectif de la session** : Backend paiement B2C (sources, payee lookup, submit) + client API app. Prochaine : écrans Payer (wizard).
+- **Phase concernée** : Phase 1 — B2C (priorité flux Payer) **et** Phase 2 — cadrage B2B documenté.
+- **Objectif récent** : Rédaction **`SPECS-PORTAIL-MARCHAND-B2B.md`** (onboarding marchand, validation back-office, tables v1, phases codage). **Prochaine étape B2B** : script SQL + squelette `business/` + file validation marchands.
 - **Écart à signaler** : Aucun.
 
 ```text
-Focus actuel : Phase 1 — B2C. Backend : payment/sources, payee/token, payee/lookup, payment/submit. Logs log_utilisateur_application + api_logs (PCI). App : api.js + config URL base. À faire : écrans flux Payer.
+Focus actuel : Phase 1 — B2C (écrans Payer). Parallèle : Phase 2 — specs portail marchand livrées ; implémentation business/ à planifier (SQL Phase 0 specs).
 Écart : aucun.
 ```
 
 ---
 
-## 8. Rappel — Où est le code aujourd’hui
+## 9. Rappel — Où est le code aujourd’hui
 
 | Couche | Emplacement actuel |
 |--------|--------------------|
 | API B2C | `application/controllers/api/Apiapp.php`, routes dans `application/config/routes.php` |
 | App mobile | `mobileapp/` (Expo, écrans dans `src/screens/`, API client dans `src/services/api.js`) |
 | Backoffice KYC | `application/controllers/Kyc_backoffice.php`, vues `application/views/kyc_backoffice/` |
-| SQL / schémas | `sql/` (utilisateur, KYC, comptes MM, bancaires, cartes, notifications, transactions carte↔MM, **11_ripa_payee_token**, **12_transaction_paiement_ripa**) |
+| **Portail marchand (B2B)** | `application/controllers/business/` (Auth, Dashboard, Inscription), `Business_marchand_backoffice.php`, `application/models/business/`, `application/views/business/`, `application/views/business_backoffice/`, `application/config/business.php` — **`docs/SPECS-PORTAIL-MARCHAND-B2B.md`** |
+| SQL / schémas | `sql/` (utilisateur, KYC, comptes MM, bancaires, cartes, notifications, transactions carte↔MM, **11_ripa_payee_token**, **12_transaction_paiement_ripa**) ; **à venir** : tables `business_*` selon specs |
 | Helpers / config | `application/helpers/custom_helper.php` (chiffrement RIPA), `application/config/config.php` |
 
 ---

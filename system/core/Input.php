@@ -564,9 +564,10 @@ class CI_Input {
 			case 'ipv6':
 				$which = FILTER_FLAG_IPV6;
 				break;
-			default:
-				$which = NULL;
-				break;
+		default:
+			// PHP 8.1+ : filter_var() n’accepte plus null en 3e argument (options) — 0 = aucun flag.
+			$which = 0;
+			break;
 		}
 
 		return (bool) filter_var($ip, FILTER_VALIDATE_IP, $which);

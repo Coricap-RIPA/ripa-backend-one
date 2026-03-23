@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 //$config['base_url'] = 'http://192.168.1.151/deepay/';
-$config['base_url'] = 'http://192.168.48.151/ripa/';
+$config['base_url'] = 'http://192.168.31.116/ripa/';
 //$config['base_url'] = 'http://192.168.85.114/ripaweb/';
 
 /*

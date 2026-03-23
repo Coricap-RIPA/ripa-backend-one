@@ -44,6 +44,10 @@ class Apiapp extends CI_Controller {
         if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
             exit(0);
         }
+
+        // Rate limiting (IP + palier par type d’action) — voir config/ripa_rate_limit.php
+        $this->load->library('Rate_limit_library');
+        $this->rate_limit_library->enforce();
     }
 
     // =========================================================================
@@ -321,14 +325,22 @@ class Apiapp extends CI_Controller {
      * @return array [ id, nom_complet, phone ]
      */
     private function _build_user_response($user) {
-        $nom_complet = '';
-        if (!empty($user['nom_c']) || !empty($user['post_nom_c']) || !empty($user['prenom_c'])) {
-            $nom_complet = trim(
-                decrypt_ripa(isset($user['nom_c']) ? $user['nom_c'] : '') . ' ' .
-                decrypt_ripa(isset($user['post_nom_c']) ? $user['post_nom_c'] : '') . ' ' .
-                decrypt_ripa(isset($user['prenom_c']) ? $user['prenom_c'] : '')
-            );
+        $nom_plain = '';
+        $post_nom_plain = '';
+        $prenom_plain = '';
+        if (!empty($user['nom_c'])) {
+            $d = decrypt_ripa($user['nom_c']);
+            $nom_plain = ($d !== false && $d !== null) ? (string) $d : '';
         }
+        if (!empty($user['post_nom_c'])) {
+            $d = decrypt_ripa($user['post_nom_c']);
+            $post_nom_plain = ($d !== false && $d !== null) ? (string) $d : '';
+        }
+        if (!empty($user['prenom_c'])) {
+            $d = decrypt_ripa($user['prenom_c']);
+            $prenom_plain = ($d !== false && $d !== null) ? (string) $d : '';
+        }
+        $nom_complet = trim($nom_plain . ' ' . $post_nom_plain . ' ' . $prenom_plain);
         if ($nom_complet === '' && !empty($user['nom_complet'])) {
             $nom_complet = $user['nom_complet'];
         }
@@ -336,6 +348,9 @@ class Apiapp extends CI_Controller {
             'id' => (int) $user['id_utilisateur_application'],
             'nom_complet' => $nom_complet,
             'phone' => isset($user['phone']) ? $user['phone'] : '',
+            'nom' => $nom_plain,
+            'post_nom' => $post_nom_plain,
+            'prenom' => $prenom_plain,
         );
     }
 
@@ -1473,6 +1488,25 @@ class Apiapp extends CI_Controller {
     }
 
     /**
+     * Récupérer ou créer le token payee (ripa://p/{token}).
+     * @param int $user_id
+     * @return string token court
+     */
+    private function _ensure_payee_token($user_id) {
+        $row = $this->db->get_where('ripa_payee_token', array('id_utilisateur_application' => $user_id))->row_array();
+        if ($row) {
+            return (string) $row['token'];
+        }
+        $token = bin2hex(random_bytes(16));
+        $this->db->insert('ripa_payee_token', array(
+            'id_utilisateur_application' => $user_id,
+            'token' => $token,
+        ));
+        $this->_log_app('creation_token_payee', 'ripa_payee_token', $this->db->insert_id(), array(), $user_id);
+        return $token;
+    }
+
+    /**
      * Récupérer ou créer le token payee pour afficher le QR (ripa://p/{token}).
      * GET /api/app/payee/token
      */
@@ -1494,12 +1528,7 @@ class Apiapp extends CI_Controller {
                 return;
             }
 
-            $token = bin2hex(random_bytes(16));
-            $this->db->insert('ripa_payee_token', array(
-                'id_utilisateur_application' => $user_id,
-                'token' => $token,
-            ));
-            $this->_log_app('creation_token_payee', 'ripa_payee_token', $this->db->insert_id(), array(), $user_id);
+            $token = $this->_ensure_payee_token($user_id);
             $this->response_format->send_success(array(
                 'token' => $token,
                 'qr_uri' => 'ripa://p/' . $token,
@@ -1509,6 +1538,77 @@ class Apiapp extends CI_Controller {
             log_message('error', 'payee_token: ' . $e->getMessage());
             $this->response_format->send_error('Configuration requise : exécutez sql/11_ripa_payee_token.sql sur la base de données.', 503);
         }
+    }
+
+    /**
+     * Contexte pour générer le QR « Recevoir » : token, moyens disponibles, destination implicite ou préférence chiffrée.
+     * GET /api/app/payee/qr-context
+     */
+    public function payee_qr_context() {
+        if ($this->input->method() !== 'get') {
+            $this->response_format->send_error('Méthode non autorisée', 405);
+        }
+        $auth = $this->require_auth();
+        $user_id = $auth['user_id'];
+        try {
+            $token = $this->_ensure_payee_token($user_id);
+        } catch (\Exception $e) {
+            log_message('error', 'payee_qr_context: ' . $e->getMessage());
+            $this->response_format->send_error('Configuration requise : sql/11_ripa_payee_token.sql', 503);
+            return;
+        }
+        $available = $this->_get_payee_available_destination_types($user_id);
+        $implicit = count($available) === 1 ? $available[0] : null;
+        $saved = null;
+        if ($this->db->field_exists('payee_qr_destination_c', 'utilisateur_application')) {
+            $u = $this->db->get_where('utilisateur_application', array('id_utilisateur_application' => $user_id))->row_array();
+            if (!empty($u['payee_qr_destination_c'])) {
+                $dec = decrypt_ripa($u['payee_qr_destination_c']);
+                if ($dec !== false && $dec !== '' && in_array((string) $dec, $available, true)) {
+                    $saved = (string) $dec;
+                }
+            }
+        }
+        $this->response_format->send_success(array(
+            'token' => $token,
+            'available_destination_types' => $available,
+            'implicit_destination' => $implicit,
+            'saved_destination_type' => $saved,
+        ), 'Contexte QR payee');
+    }
+
+    /**
+     * Enregistrer la préférence de moyen de réception pour le QR (chiffré en base).
+     * POST /api/app/payee/qr-preference — Body: { "destination_type": "carte_virtuelle"|"mobile_money"|"compte_bancaire" }
+     */
+    public function payee_qr_preference() {
+        if ($this->input->method() !== 'post') {
+            $this->response_format->send_error('Méthode non autorisée', 405);
+        }
+        $auth = $this->require_auth();
+        $user_id = $auth['user_id'];
+        if (!$this->db->field_exists('payee_qr_destination_c', 'utilisateur_application')) {
+            $this->response_format->send_error('Migration requise : exécutez sql/13_payee_qr_destination_preference.sql', 503);
+            return;
+        }
+        $json = json_decode(file_get_contents('php://input'), true);
+        $dest = isset($json['destination_type']) ? trim((string) $json['destination_type']) : '';
+        $valid = array('carte_virtuelle', 'mobile_money', 'compte_bancaire');
+        if (!in_array($dest, $valid, true)) {
+            $this->response_format->send_error('destination_type invalide', 400);
+            return;
+        }
+        $available = $this->_get_payee_available_destination_types($user_id);
+        if (!in_array($dest, $available, true)) {
+            $this->response_format->send_error('Ce moyen de réception n\'est pas disponible sur votre compte.', 400);
+            return;
+        }
+        $this->db->where('id_utilisateur_application', $user_id);
+        $this->db->update('utilisateur_application', array(
+            'payee_qr_destination_c' => encrypt_ripa($dest),
+        ));
+        $this->_log_app('payee_qr_preference', 'utilisateur_application', $user_id, array('destination_type' => $dest), $user_id);
+        $this->response_format->send_success(array('destination_type' => $dest), 'Préférence enregistrée');
     }
 
     /**
@@ -1559,6 +1659,14 @@ class Apiapp extends CI_Controller {
         $valid_dest = array('carte_virtuelle', 'mobile_money', 'compte_bancaire');
         if (!in_array($destination_type, $valid_dest, true)) {
             $this->response_format->send_error('destination_type invalide (carte_virtuelle, mobile_money, compte_bancaire)', 400);
+        }
+        if ($token !== '') {
+            $token = trim($token);
+            if (strpos($token, 'ripa://p/') === 0) {
+                $token = substr($token, strlen('ripa://p/'));
+            }
+            $token = preg_replace('/[#?].*$/', '', $token);
+            $token = trim($token);
         }
         if ($token === '' && $phone === '') {
             $this->response_format->send_error('Indiquez token (QR) ou phone (contact)', 400);
@@ -1645,6 +1753,14 @@ class Apiapp extends CI_Controller {
         $amount = isset($json['amount']) ? (float) $json['amount'] : 0;
         $pin = isset($json['pin']) ? trim((string) $json['pin']) : '';
         $libelle = isset($json['libelle']) ? trim((string) $json['libelle']) : '';
+
+        if ($payee_token !== '') {
+            if (strpos($payee_token, 'ripa://p/') === 0) {
+                $payee_token = substr($payee_token, strlen('ripa://p/'));
+            }
+            $payee_token = preg_replace('/[#?].*$/', '', $payee_token);
+            $payee_token = trim($payee_token);
+        }
 
         $valid_source = array('carte_virtuelle', 'carte_physique', 'mobile_money', 'compte_bancaire');
         $valid_dest = array('carte_virtuelle', 'mobile_money', 'compte_bancaire');
@@ -1964,8 +2080,11 @@ class Apiapp extends CI_Controller {
         $auth = $this->require_auth();
         $user_id = $auth['user_id'];
         $type = $this->input->get('type') ?: 'all';
-        $date_from = $this->input->get('date_from') ?: '';
-        $date_to = $this->input->get('date_to') ?: '';
+        if (!in_array($type, array('all', 'sent', 'received'), true)) {
+            $type = 'all';
+        }
+        $date_from = ripa_validate_date_ymd($this->input->get('date_from'));
+        $date_to = ripa_validate_date_ymd($this->input->get('date_to'));
         $limit = min(100, max(10, (int) $this->input->get('limit') ?: 30));
         $offset = max(0, (int) $this->input->get('offset'));
 

@@ -49,6 +49,8 @@ $route['api/app/notifications/read'] = 'api/apiapp/notifications_mark_read';
 // Paiement B2C (Scan & Pay, C2C) — Phase 1
 $route['api/app/payment/sources'] = 'api/apiapp/payment_sources';
 $route['api/app/payee/token'] = 'api/apiapp/payee_token';
+$route['api/app/payee/qr-context'] = 'api/apiapp/payee_qr_context';
+$route['api/app/payee/qr-preference'] = 'api/apiapp/payee_qr_preference';
 $route['api/app/payee/lookup'] = 'api/apiapp/payee_lookup';
 $route['api/app/payment/submit'] = 'api/apiapp/payment_submit';
 
@@ -103,3 +105,33 @@ $route['api/config/exchange-rates'] = 'api/config/get_exchange_rates';
 $route['api/config/commissions'] = 'api/config/get_commissions';
 $route['api/publicites'] = 'api/config/get_publicites';
 
+// ===========================
+// PORTAIL MARCHAND (B2B) — routes explicites (FR + chemins techniques CI)
+// ===========================
+$route['business'] = 'business/dashboard';
+$route['business/tableau-de-bord'] = 'business/dashboard';
+$route['business/inscription'] = 'business/inscription';
+$route['business/inscription/soumettre'] = 'business/inscription/submit';
+
+// Auth
+$route['business/connexion'] = 'business/auth/login';
+$route['business/connexion/traitement'] = 'business/auth/login_submit';
+$route['business/deconnexion'] = 'business/auth/logout';
+$route['business/premier-mot-de-passe'] = 'business/auth/first_password';
+$route['business/premier-mot-de-passe/enregistrer'] = 'business/auth/first_password_submit';
+
+// Services
+$route['business/services'] = 'business/services/index';
+$route['business/services/ajouter'] = 'business/services/add';
+$route['business/services/modifier/(:num)'] = 'business/services/edit/$1';
+$route['business/services/supprimer/(:num)'] = 'business/services/delete/$1';
+
+// Employés
+$route['business/employes'] = 'business/employes/index';
+$route['business/employes/ajouter'] = 'business/employes/add';
+$route['business/employes/modifier/(:num)'] = 'business/employes/edit/$1';
+$route['business/employes/supprimer/(:num)'] = 'business/employes/delete/$1';
+
+// Transactions
+$route['business/transactions'] = 'business/transactions/index';
+$route['business/transactions/saisir'] = 'business/transactions/add';

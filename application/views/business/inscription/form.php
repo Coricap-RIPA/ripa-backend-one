@@ -68,6 +68,14 @@
                                                 autocomplete="tel" />
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="identifiant_legal">RCCM / identifiant légal (optionnel)</label>
+                                        <div class="input-icon-wrap">
+                                            <i class="fa fa-id-card"></i>
+                                            <input class="form-control" id="identifiant_legal" name="identifiant_legal"
+                                                maxlength="100" placeholder="Ex. CD/KIN/RCCM/24-B-00001" />
+                                        </div>
+                                    </div>
                                     <div class="d-flex flex-wrap align-items-center" style="gap:12px;">
                                         <button type="submit" class="btn btn-ripa-primary btn-lg"><i class="fa fa-paper-plane"></i> Envoyer la demande</button>
                                         <a class="text-decoration-none font-weight-bold" style="color:var(--ripa-bar);" href="<?php echo site_url('business/connexion'); ?>">Déjà un compte ? Connexion</a>

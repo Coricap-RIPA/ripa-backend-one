@@ -13,6 +13,24 @@ class Business_marchand_model extends CI_Model {
         return $this->db->get_where($this->table, array('id' => (int) $id))->row_array();
     }
 
+    public function exists_by_email($email_contact, $exclude_id = null) {
+        $email = strtolower(trim((string) $email_contact));
+        $this->db->where('email_contact', $email);
+        if ($exclude_id !== null) {
+            $this->db->where('id !=', (int) $exclude_id);
+        }
+        return (int) $this->db->count_all_results($this->table) > 0;
+    }
+
+    public function exists_by_phone($telephone_contact, $exclude_id = null) {
+        $tel = trim((string) $telephone_contact);
+        $this->db->where('telephone_contact', $tel);
+        if ($exclude_id !== null) {
+            $this->db->where('id !=', (int) $exclude_id);
+        }
+        return (int) $this->db->count_all_results($this->table) > 0;
+    }
+
     public function get_all_by_statut($statut = null) {
         if ($statut !== null && $statut !== '') {
             $this->db->where('statut', $statut);
@@ -32,12 +50,18 @@ class Business_marchand_model extends CI_Model {
         return $this->db->update($this->table, $data);
     }
 
-    public function create_demande($raison_sociale, $email_contact, $telephone_contact, $id_utilisateur_demandeur = null) {
+    public function delete_row($id) {
+        $this->db->where('id', (int) $id);
+        return $this->db->delete($this->table);
+    }
+
+    public function create_demande($raison_sociale, $email_contact, $telephone_contact, $id_utilisateur_demandeur = null, $identifiant_legal = null) {
         $now = date('Y-m-d H:i:s');
         return $this->insert_row(array(
             'raison_sociale' => $raison_sociale,
             'email_contact' => strtolower(trim($email_contact)),
             'telephone_contact' => $telephone_contact,
+            'identifiant_legal' => $identifiant_legal,
             'statut' => 'en_attente_validation',
             'id_utilisateur_demandeur' => $id_utilisateur_demandeur,
             'date_demande' => $now,

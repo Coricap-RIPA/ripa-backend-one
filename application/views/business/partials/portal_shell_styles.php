@@ -14,15 +14,17 @@
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
-    .ripa-portal-nav {
+    /* <header> et non <nav> : évite les règles globales Materialize (nav { height:56px; line-height:56px; } etc.) */
+    header.ripa-portal-nav {
         background: linear-gradient(135deg, var(--ripa-bar) 0%, #1a0229 100%);
         box-shadow: 0 4px 20px rgba(39, 3, 69, 0.35);
         padding: 0 1rem;
         position: sticky;
         top: 0;
         z-index: 1030;
+        display: block;
     }
-    .ripa-portal-nav .nav-inner {
+    header.ripa-portal-nav .nav-inner {
         max-width: 1320px;
         margin: 0 auto;
         display: flex;
@@ -32,36 +34,37 @@
         gap: 0.5rem;
         min-height: 58px;
     }
-    .ripa-portal-nav .brand-block {
+    header.ripa-portal-nav .brand-block {
         display: flex;
         align-items: center;
         gap: 12px;
         text-decoration: none;
         color: #fff !important;
     }
-    .ripa-portal-nav .brand-block img {
+    header.ripa-portal-nav .brand-block img {
         height: 36px;
         width: auto;
         object-fit: contain;
         border-radius: 8px;
     }
-    .ripa-portal-nav .brand-text strong {
+    header.ripa-portal-nav .brand-text strong {
         font-size: 1rem;
         letter-spacing: 0.02em;
     }
-    .ripa-portal-nav .brand-text span {
-        font-size: 0.75rem;
-        opacity: 0.88;
+    header.ripa-portal-nav .brand-text span {
+        font-size: 0.78rem;
+        opacity: 0.95;
         display: block;
-        line-height: 1.2;
+        line-height: 1.25;
+        color: rgba(255, 255, 255, 0.92);
     }
-    .ripa-portal-nav .nav-links {
+    header.ripa-portal-nav .nav-links {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         gap: 4px;
     }
-    .ripa-portal-nav .nav-links a {
+    header.ripa-portal-nav .nav-links a {
         color: rgba(255,255,255,0.88);
         text-decoration: none;
         padding: 0.45rem 0.75rem;
@@ -69,25 +72,37 @@
         font-size: 0.875rem;
         font-weight: 500;
         transition: background 0.2s, color 0.2s;
+        line-height: 1.35;
+        display: inline-flex;
+        align-items: center;
+        box-sizing: border-box;
     }
-    .ripa-portal-nav .nav-links a:hover {
+    header.ripa-portal-nav .nav-links a:hover {
         color: #fff;
         background: rgba(255,255,255,0.1);
     }
-    .ripa-portal-nav .nav-links a.is-active {
+    header.ripa-portal-nav .nav-links a.is-active {
         color: #fff;
         background: rgba(255,255,255,0.18);
         font-weight: 600;
     }
-    .ripa-portal-nav .btn-logout {
+    header.ripa-portal-nav .btn-logout {
         border: 1px solid rgba(255,255,255,0.45);
         color: #fff !important;
         padding: 0.4rem 0.9rem !important;
         border-radius: 8px;
         font-size: 0.8rem !important;
         margin-left: 0.25rem;
+        line-height: 1.35 !important;
+        display: inline-flex !important;
+        align-items: center;
+        box-sizing: border-box;
+        background: transparent !important;
+        text-transform: none;
+        letter-spacing: normal;
+        box-shadow: none !important;
     }
-    .ripa-portal-nav .btn-logout:hover {
+    header.ripa-portal-nav .btn-logout:hover {
         background: rgba(255,255,255,0.12) !important;
     }
     .ripa-portal-main {

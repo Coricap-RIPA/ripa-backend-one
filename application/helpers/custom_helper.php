@@ -355,4 +355,60 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         return true;
     }
 
+    /**
+     * Lit un flashdata puis retire la clé (affichage unique, évite un second affichage au rafraîchissement).
+     *
+     * @param string $key ex. kyb_message, message
+     * @return mixed|null
+     */
+    function ripa_session_consume_flashdata($key) {
+        $CI = &get_instance();
+        $v = $CI->session->flashdata($key);
+        if ($v !== null) {
+            $CI->session->unset_userdata($key);
+            $CI->session->unmark_flash($key);
+        }
+        return $v;
+    }
+
+    /**
+     * Chemin absolu d’une pièce KYB si le chemin relatif appartient bien au marchand.
+     *
+     * @param string $relative_path ex. assets/uploads/business_kyb/12/abc.pdf
+     * @return string|null
+     */
+    function ripa_kyb_storage_resolve_full_path($relative_path, $id_marchand) {
+        $relative_path = str_replace(array("\0", '\\'), '', (string) $relative_path);
+        if ($relative_path === '' || strpos($relative_path, '..') !== false) {
+            return null;
+        }
+        $prefix = 'assets/uploads/business_kyb/' . (int) $id_marchand . '/';
+        if (strpos($relative_path, $prefix) !== 0) {
+            return null;
+        }
+        $full = @realpath(FCPATH . $relative_path);
+        if ($full === false || !is_file($full)) {
+            return null;
+        }
+        $base = @realpath(FCPATH . $prefix);
+        if ($base === false || strpos($full, $base) !== 0) {
+            return null;
+        }
+        return $full;
+    }
+
+    /**
+     * @return string pdf|image|none
+     */
+    function ripa_kyb_storage_file_kind($relative_path) {
+        $e = strtolower(pathinfo(trim((string) $relative_path), PATHINFO_EXTENSION));
+        if ($e === 'pdf') {
+            return 'pdf';
+        }
+        if (in_array($e, array('jpg', 'jpeg', 'png'), true)) {
+            return 'image';
+        }
+        return 'none';
+    }
+
 ?>

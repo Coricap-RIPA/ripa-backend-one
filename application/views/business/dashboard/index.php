@@ -132,6 +132,7 @@ $statut_label = isset($statut_fr[$statut]) ? $statut_fr[$statut] : htmlspecialch
                         <div class="mt-3 d-flex flex-wrap" style="gap:8px;">
                             <a href="<?php echo site_url('business/services'); ?>" class="btn btn-sm btn-outline-secondary" style="border-radius:8px;">Services</a>
                             <a href="<?php echo site_url('business/employes'); ?>" class="btn btn-sm btn-outline-secondary" style="border-radius:8px;">Employés</a>
+                            <a href="<?php echo site_url('business/kyb'); ?>" class="btn btn-sm btn-outline-secondary" style="border-radius:8px;">KYB</a>
                         </div>
                     </div>
                 </div>
@@ -217,6 +218,12 @@ $statut_label = isset($statut_fr[$statut]) ? $statut_fr[$statut] : htmlspecialch
                                         <?php if (!empty($em['poste'])) { ?>
                                             <br /><span class="text-muted small"><?php echo htmlspecialchars($em['poste']); ?></span>
                                         <?php } ?>
+                                        <?php
+                                        $em_svc = !empty($em['service_libelle']) ? $em['service_libelle'] : ($em['departement'] ?? '');
+                                        if ($em_svc !== '') {
+                                            ?><br /><span class="text-muted small"><?php echo htmlspecialchars($em_svc); ?></span><?php
+                                        }
+                                        ?>
                                     </div>
                                     <?php if (!empty($em['actif'])) { ?>
                                         <span class="badge badge-light border" style="font-size:0.7rem;">Actif</span>

@@ -22,10 +22,13 @@ echo $footer;
                 <?php
                 $base = site_url('Business_marchand_backoffice/index');
                 $f = isset($filter_statut) ? $filter_statut : '';
+                $can_editer = !empty($can_editer);
+                $can_supprimer = !empty($can_supprimer);
                 ?>
                 <a href="<?php echo $base; ?>" class="btn btn-small <?php echo ($f === '' || $f === null) ? 'purple' : 'grey'; ?>">Tous</a>
                 <a href="<?php echo $base . '?statut=en_attente_validation'; ?>" class="btn btn-small <?php echo $f === 'en_attente_validation' ? 'purple' : 'grey'; ?>">En attente</a>
                 <a href="<?php echo $base . '?statut=actif'; ?>" class="btn btn-small <?php echo $f === 'actif' ? 'purple' : 'grey'; ?>">Actifs</a>
+                <a href="<?php echo $base . '?statut=suspendu'; ?>" class="btn btn-small <?php echo $f === 'suspendu' ? 'purple' : 'grey'; ?>">Suspendus</a>
                 <a href="<?php echo $base . '?statut=refuse'; ?>" class="btn btn-small <?php echo $f === 'refuse' ? 'purple' : 'grey'; ?>">Refusés</a>
             </div>
             <div class="col s12" style="margin-top: 20px;">
@@ -38,12 +41,13 @@ echo $footer;
                             <th>Téléphone</th>
                             <th>Statut</th>
                             <th>Date demande</th>
+                            <th>Motif refus</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php if (empty($list)) { ?>
-                            <tr><td colspan="7">Aucune entrée.</td></tr>
+                            <tr><td colspan="8">Aucune entrée.</td></tr>
                         <?php } else { ?>
                             <?php foreach ($list as $row) { ?>
                                 <tr>
@@ -53,20 +57,73 @@ echo $footer;
                                     <td><?php echo htmlspecialchars($row['telephone_contact']); ?></td>
                                     <td><?php echo htmlspecialchars($row['statut']); ?></td>
                                     <td><?php echo htmlspecialchars($row['date_demande'] ?? ''); ?></td>
+                                    <td style="max-width:220px;font-size:12px;vertical-align:top;">
+                                        <?php
+                                        $mot = isset($row['motif_refus']) ? trim((string) $row['motif_refus']) : '';
+                                        echo $mot !== '' ? nl2br(htmlspecialchars($mot, ENT_QUOTES, 'UTF-8')) : '—';
+                                        ?>
+                                    </td>
                                     <td>
                                         <?php if ($row['statut'] === 'en_attente_validation') { ?>
-                                            <form method="post" action="<?php echo site_url('Business_marchand_backoffice/valider/' . (int) $row['id']); ?>" style="display:inline-block;" onsubmit="return confirm('Valider ce compte et créer l’administrateur portail ?');">
-                                                <?php echo ripa_bo_csrf_field(); ?>
-                                                <button type="submit" class="btn btn-small purple">Valider</button>
-                                            </form>
-                                            <button type="button"
-                                                class="btn btn-small red lighten-2 ripa-bm-open-refus"
-                                                style="margin-left:4px;"
-                                                data-id-marchand="<?php echo (int) $row['id']; ?>"
-                                                data-raison="<?php echo htmlspecialchars($row['raison_sociale'], ENT_QUOTES, 'UTF-8'); ?>"
-                                                data-email="<?php echo htmlspecialchars($row['email_contact'], ENT_QUOTES, 'UTF-8'); ?>">
-                                                Refuser
-                                            </button>
+                                            <?php if ($can_editer) { ?>
+                                                <button type="button"
+                                                    class="btn btn-small purple ripa-bm-open-valider"
+                                                    data-id-marchand="<?php echo (int) $row['id']; ?>"
+                                                    data-raison="<?php echo htmlspecialchars($row['raison_sociale'], ENT_QUOTES, 'UTF-8'); ?>"
+                                                    data-email="<?php echo htmlspecialchars($row['email_contact'], ENT_QUOTES, 'UTF-8'); ?>">
+                                                    Valider
+                                                </button>
+                                                <button type="button"
+                                                    class="btn btn-small red lighten-2 ripa-bm-open-refus"
+                                                    style="margin-left:4px;"
+                                                    data-id-marchand="<?php echo (int) $row['id']; ?>"
+                                                    data-raison="<?php echo htmlspecialchars($row['raison_sociale'], ENT_QUOTES, 'UTF-8'); ?>"
+                                                    data-email="<?php echo htmlspecialchars($row['email_contact'], ENT_QUOTES, 'UTF-8'); ?>">
+                                                    Refuser
+                                                </button>
+                                            <?php } else { echo '—'; } ?>
+                                        <?php } elseif ($row['statut'] === 'refuse') { ?>
+                                            <?php if ($can_editer) { ?>
+                                                <a class="btn btn-small grey darken-1" href="<?php echo site_url('Business_marchand_backoffice/edit/' . (int) $row['id']); ?>" style="margin-bottom:4px;">Modifier</a>
+                                                <button type="button"
+                                                    class="btn btn-small purple ripa-bm-open-valider"
+                                                    style="margin-left:4px;"
+                                                    data-id-marchand="<?php echo (int) $row['id']; ?>"
+                                                    data-raison="<?php echo htmlspecialchars($row['raison_sociale'], ENT_QUOTES, 'UTF-8'); ?>"
+                                                    data-email="<?php echo htmlspecialchars($row['email_contact'], ENT_QUOTES, 'UTF-8'); ?>">
+                                                    Approuver
+                                                </button>
+                                            <?php } ?>
+                                            <?php if ($can_supprimer) { ?>
+                                                <form method="post" action="<?php echo site_url('Business_marchand_backoffice/supprimer/' . (int) $row['id']); ?>" style="display:inline-block;margin-left:4px;" onsubmit="return confirm('Supprimer définitivement cette demande refusée ?');">
+                                                    <?php echo ripa_bo_csrf_field(); ?>
+                                                    <button type="submit" class="btn btn-small red lighten-2">Supprimer</button>
+                                                </form>
+                                            <?php } ?>
+                                            <?php if (!$can_editer && !$can_supprimer) { echo '—'; } ?>
+                                        <?php } elseif ($row['statut'] === 'actif') { ?>
+                                            <?php if ($can_editer) { ?>
+                                                <a class="btn btn-small grey darken-1" href="<?php echo site_url('Business_marchand_backoffice/edit/' . (int) $row['id']); ?>" style="margin-bottom:4px;">Modifier</a>
+                                                <form method="post" action="<?php echo site_url('Business_marchand_backoffice/bloquer/' . (int) $row['id']); ?>" style="display:inline-block;" onsubmit="return confirm('Bloquer ce compte marchand (statut suspendu) ?');">
+                                                    <?php echo ripa_bo_csrf_field(); ?>
+                                                    <button type="submit" class="btn btn-small orange darken-2">Bloquer</button>
+                                                </form>
+                                            <?php } else { echo '—'; } ?>
+                                        <?php } elseif ($row['statut'] === 'suspendu') { ?>
+                                            <?php if ($can_editer) { ?>
+                                                <a class="btn btn-small grey darken-1" href="<?php echo site_url('Business_marchand_backoffice/edit/' . (int) $row['id']); ?>" style="margin-bottom:4px;">Modifier</a>
+                                                <form method="post" action="<?php echo site_url('Business_marchand_backoffice/debloquer/' . (int) $row['id']); ?>" style="display:inline-block;" onsubmit="return confirm('Réactiver ce compte marchand (retour au statut actif) ?');">
+                                                    <?php echo ripa_bo_csrf_field(); ?>
+                                                    <button type="submit" class="btn btn-small green darken-2">Réactiver</button>
+                                                </form>
+                                            <?php } ?>
+                                            <?php if ($can_supprimer) { ?>
+                                                <form method="post" action="<?php echo site_url('Business_marchand_backoffice/supprimer_actif/' . (int) $row['id']); ?>" style="display:inline-block;margin-left:4px;" onsubmit="return confirm('Supprimer définitivement ce compte suspendu ? (possible seulement si aucune activité métier n’est liée)');">
+                                                    <?php echo ripa_bo_csrf_field(); ?>
+                                                    <button type="submit" class="btn btn-small red lighten-2">Supprimer</button>
+                                                </form>
+                                            <?php } ?>
+                                            <?php if (!$can_editer && !$can_supprimer) { echo '—'; } ?>
                                         <?php } else { ?>
                                             —
                                         <?php } ?>
@@ -100,6 +157,29 @@ echo $footer;
                 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-top:12px;">
                     <button type="button" class="btn grey lighten-1 ripa-bm-modal-refus-close" style="color:#333;">Annuler</button>
                     <button type="submit" class="btn red lighten-2">Confirmer le refus</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal validation : mot de passe provisoire éditable -->
+    <div id="ripa-bm-modal-valider" class="ripa-bm-modal-refus" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="ripa-bm-modal-valider-title" aria-hidden="true">
+        <div class="ripa-bm-modal-refus-dialog">
+            <h5 id="ripa-bm-modal-valider-title" style="margin-top:0;color:#270345;font-weight:600;">Activer le compte marchand</h5>
+            <p class="grey-text text-darken-1" style="font-size:14px;margin-bottom:8px;">
+                <strong id="ripa-bm-valider-raison"></strong><br />
+                <span id="ripa-bm-valider-email"></span>
+            </p>
+            <p class="grey-text" style="font-size:13px;">Vous pouvez ajuster le mot de passe provisoire avant activation.</p>
+            <form id="ripa-bm-form-valider" method="post" action="">
+                <?php echo ripa_bo_csrf_field(); ?>
+                <div class="input-field" style="margin-top:1rem;margin-bottom:1rem;">
+                    <label for="ripa-bm-valider-password" style="position:static;transform:none;font-size:13px;color:#5c4a6e;">Mot de passe provisoire *</label>
+                    <input id="ripa-bm-valider-password" type="text" name="default_password" minlength="8" required style="border:1px solid #ccc;border-radius:4px;padding:10px;width:100%;box-sizing:border-box;" />
+                </div>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-top:12px;">
+                    <button type="button" class="btn grey lighten-1 ripa-bm-modal-valider-close" style="color:#333;">Annuler</button>
+                    <button type="submit" class="btn purple">Confirmer l’activation</button>
                 </div>
             </form>
         </div>
@@ -177,6 +257,62 @@ echo $footer;
 
             document.addEventListener('keydown', function (e) {
                 if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+            });
+
+            var modalValider = document.getElementById('ripa-bm-modal-valider');
+            var formValider = document.getElementById('ripa-bm-form-valider');
+            var pwdValider = document.getElementById('ripa-bm-valider-password');
+            var validerRaison = document.getElementById('ripa-bm-valider-raison');
+            var validerEmail = document.getElementById('ripa-bm-valider-email');
+
+            function generateDefaultPassword() {
+                var chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789';
+                var out = 'Ripa#';
+                for (var i = 0; i < 8; i++) {
+                    out += chars.charAt(Math.floor(Math.random() * chars.length));
+                }
+                return out + '9';
+            }
+
+            function openValiderModal(id, raison, email) {
+                formValider.setAttribute('action', '<?php echo site_url('Business_marchand_backoffice/valider'); ?>/' + id);
+                validerRaison.textContent = raison || '';
+                validerEmail.textContent = email || '';
+                pwdValider.value = generateDefaultPassword();
+                modalValider.style.display = 'flex';
+                modalValider.classList.add('is-open');
+                modalValider.setAttribute('aria-hidden', 'false');
+                setTimeout(function () { pwdValider.focus(); pwdValider.select(); }, 50);
+            }
+
+            function closeValiderModal() {
+                modalValider.style.display = 'none';
+                modalValider.classList.remove('is-open');
+                modalValider.setAttribute('aria-hidden', 'true');
+                formValider.setAttribute('action', '');
+                pwdValider.value = '';
+            }
+
+            document.querySelectorAll('.ripa-bm-open-valider').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    openValiderModal(
+                        btn.getAttribute('data-id-marchand'),
+                        btn.getAttribute('data-raison'),
+                        btn.getAttribute('data-email')
+                    );
+                });
+            });
+
+            modalValider.querySelectorAll('.ripa-bm-modal-valider-close').forEach(function (el) {
+                el.addEventListener('click', closeValiderModal);
+            });
+
+            modalValider.addEventListener('click', function (e) {
+                if (e.target === modalValider) closeValiderModal();
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && modalValider.classList.contains('is-open')) closeValiderModal();
             });
         })();
     </script>

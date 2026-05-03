@@ -57,4 +57,68 @@ class Kyc_model extends CI_Model {
         ))->row_array();
         return !empty($row);
     }
+
+    // -------------------------------------------------------------------------
+    // Backoffice RIPA : liste, détail, valider, rejeter, supprimer
+    // -------------------------------------------------------------------------
+
+    /**
+     * Liste tous les dossiers KYC pour le backoffice (avec filtre statut optionnel)
+     * @param string|null $statut 'en_attente'|'valide'|'rejete' ou null pour tous
+     * @return array
+     */
+    public function get_all_for_backoffice($statut = null) {
+        $this->db->select('k.id_kyc, k.id_utilisateur_application, k.statut, k.date_enregistrement, k.date_validation_kyc, k.date_prochaine_kyc, u.phone');
+        $this->db->from($this->table . ' k');
+        $this->db->join('utilisateur_application u', 'u.id_utilisateur_application = k.id_utilisateur_application', 'left');
+        $this->db->order_by('k.date_enregistrement', 'DESC');
+        if ($statut !== null && $statut !== '') {
+            $this->db->where('k.statut', $statut);
+        }
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+    /**
+     * Récupère un dossier KYC par id_kyc pour le backoffice (données brutes, déchiffrement dans le contrôleur)
+     * @param int $id_kyc
+     * @return array|null
+     */
+    public function get_by_id_for_backoffice($id_kyc) {
+        $row = $this->db->get_where($this->table, array('id_kyc' => (int) $id_kyc))->row_array();
+        return $row ?: null;
+    }
+
+    /**
+     * Met à jour le statut d'un dossier KYC (valide ou rejete)
+     * @param int $id_kyc
+     * @param string $statut 'valide'|'rejete'
+     * @return bool
+     */
+    public function set_statut($id_kyc, $statut) {
+        $id_kyc = (int) $id_kyc;
+        if (!in_array($statut, array('valide', 'rejete'), true)) {
+            return false;
+        }
+        $data = array('statut' => $statut);
+        if ($statut === 'valide') {
+            $data['date_validation_kyc'] = date('Y-m-d');
+            $data['date_prochaine_kyc'] = date('Y-m-d', strtotime('+2 years'));
+        } else {
+            $data['date_validation_kyc'] = null;
+            $data['date_prochaine_kyc'] = null;
+        }
+        $this->db->where('id_kyc', $id_kyc);
+        return $this->db->update($this->table, $data);
+    }
+
+    /**
+     * Supprime un dossier KYC (backoffice)
+     * @param int $id_kyc
+     * @return bool
+     */
+    public function delete_kyc($id_kyc) {
+        $this->db->where('id_kyc', (int) $id_kyc);
+        return $this->db->delete($this->table);
+    }
 }

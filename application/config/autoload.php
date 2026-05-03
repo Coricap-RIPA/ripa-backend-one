@@ -133,4 +133,12 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('Action_utilisateur_model', 'Role_model', 'Utilisateur_model', 'Group_fonctionnalite_model', 'Fonctionnalite_model', 'Role_permission_model', 'Sexe_model', 'Etat_civil_model', 'Devise_model', 'Commande_model','Article_commande_model','Client_model', 'Publicite_model', 'Sous_categorie_model','Categorie_sous_categorie_model','Fournisseur_model', 'Entreprise_model', 'Article_commande_client_model', 'Bureau_douane_model', 'Mode_transport_model', 'Vehicule_dedouane_model', 'Provision_model', 'Paiement_model', 'Entreprise_model', 'Taux_model', 'Commission_model', 'Facture_model','ModelGetTableRow','Article_model','Status_commande_model','Type_mobile_money_model','Compte_money_model','Article_model','Article_sortie_vente_model','Sortie_stock_model','Entree_stock_model','Facture_model','Facture_index_model','Reference_index_model','Transaction_model','Marchand_model','User_model','Kyc_model');
+$autoload['model'] = array(
+	'Action_utilisateur_model', 'Role_model', 'Utilisateur_model', 'Group_fonctionnalite_model', 'Fonctionnalite_model', 'Role_permission_model', 'Sexe_model', 'Etat_civil_model', 'Devise_model', 'Commande_model', 'Article_commande_model', 'Client_model', 'Publicite_model', 'Sous_categorie_model', 'Categorie_sous_categorie_model', 'Fournisseur_model', 'Entreprise_model', 'Article_commande_client_model', 'Bureau_douane_model', 'Mode_transport_model', 'Vehicule_dedouane_model', 'Provision_model', 'Paiement_model', 'Entreprise_model', 'Taux_model', 'Commission_model', 'Facture_model', 'ModelGetTableRow', 'Article_model', 'Status_commande_model', 'Type_mobile_money_model', 'Compte_money_model', 'Article_model', 'Article_sortie_vente_model', 'Sortie_stock_model', 'Entree_stock_model', 'Facture_model', 'Facture_index_model', 'Reference_index_model', 'Transaction_model', 'Marchand_model', 'User_model', 'Kyc_model', 'Notification_model',
+	// Portail marchand B2B (models/business/) — noms distincts pour ne pas écraser Marchand_model / Transaction_model legacy
+	'business/business_marchand_model',
+	'business/utilisateur_business_model' => 'ub_model',
+	'business/service_model',
+	'business/employe_model',
+	'business/business_transaction_model',
+);

@@ -83,6 +83,28 @@ class Response_format {
      * @param int $status_code Code HTTP
      */
     private function send_response($response, $status_code) {
+        // Log tous les appels api/app dans api_logs (traçabilité)
+        if (isset($this->CI->start_time) && get_class($this->CI) === 'Apiapp') {
+            $duration_ms = (int) round((microtime(true) - $this->CI->start_time) * 1000);
+            $action = $this->CI->router->method;
+            $method = $this->CI->input->method(true);
+            if ($method === false || $method === null) {
+                $method = isset($_SERVER['REQUEST_METHOD']) ? $_SERVER['REQUEST_METHOD'] : null;
+            }
+            try {
+                $this->CI->load->model('api_log_model');
+                $this->CI->api_log_model->insert_log(array(
+                    'service' => 'app',
+                    'action' => $action,
+                    'method' => $method,
+                    'status_code' => $status_code,
+                    'duration_ms' => $duration_ms,
+                ));
+            } catch (Exception $e) {
+                // Ne pas bloquer la réponse si le log échoue
+            }
+        }
+
         // Définir le code de statut HTTP
         $this->CI->output->set_status_header($status_code);
 

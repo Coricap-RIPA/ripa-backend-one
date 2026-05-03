@@ -7,6 +7,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Inscription extends CI_Controller {
 
+    public function __construct() {
+        parent::__construct();
+        $this->load->library('Business_api_client');
+    }
+
     public function index($message = '', $success = false) {
         $this->load->view('business/inscription/form', array(
             'message' => $message,
@@ -22,6 +27,7 @@ class Inscription extends CI_Controller {
         $this->form_validation->set_rules('raison_sociale', 'Raison sociale', 'required|min_length[2]');
         $this->form_validation->set_rules('email_contact', 'Email', 'required|valid_email');
         $this->form_validation->set_rules('telephone_contact', 'Téléphone', 'required');
+        $this->form_validation->set_rules('identifiant_legal', 'RCCM / identifiant légal', 'trim|max_length[100]');
         if (!$this->form_validation->run()) {
             $this->index(validation_errors(), false);
             return;
@@ -29,11 +35,18 @@ class Inscription extends CI_Controller {
         $rs = $this->security->xss_clean($this->input->post('raison_sociale'));
         $em = $this->security->xss_clean($this->input->post('email_contact'));
         $tel = $this->security->xss_clean($this->input->post('telephone_contact'));
-        $id = $this->business_marchand_model->create_demande($rs, $em, $tel, null);
-        if ($id) {
+        $rccm = $this->security->xss_clean($this->input->post('identifiant_legal')) ?: null;
+        $api = $this->business_api_client->post('register', array(
+            'raison_sociale' => $rs,
+            'email_contact' => $em,
+            'telephone_contact' => $tel,
+            'identifiant_legal' => $rccm,
+        ));
+        if (!empty($api['ok'])) {
             $this->index('Votre demande a été enregistrée. L’équipe RIPA la traitera sous peu.', true);
         } else {
-            $this->index('Erreur lors de l’enregistrement. Réessayez plus tard.', false);
+            $msg = !empty($api['error']) ? (string) $api['error'] : 'Erreur lors de l’enregistrement. Réessayez plus tard.';
+            $this->index($msg, false);
         }
     }
 }

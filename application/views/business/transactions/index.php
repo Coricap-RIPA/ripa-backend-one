@@ -16,9 +16,21 @@
     <?php if ($this->session->flashdata('message')) { ?>
         <div class="alert alert-success"><?php echo htmlspecialchars($this->session->flashdata('message')); ?></div>
     <?php } ?>
+    <?php if ($this->session->flashdata('warning_message')) { ?>
+        <div class="alert alert-warning"><?php echo htmlspecialchars($this->session->flashdata('warning_message')); ?></div>
+    <?php } ?>
+    <?php
+    $kyb_ok = !empty($kyb_transactions_ok);
+    ?>
+    <?php if (!empty($can_write) && !$kyb_ok) { ?>
+        <div class="alert alert-warning mb-3">
+            Les transactions ne sont pas autorisées tant que votre dossier KYB n’est pas <strong>approuvé</strong> et <strong>dans sa période de validité</strong> (12 mois après validation). Complétez ou renouvelez votre dossier depuis la page KYB.
+            <a class="alert-link" href="<?php echo site_url('business/kyb'); ?>">Accéder au KYB</a>
+        </div>
+    <?php } ?>
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1 class="h3">Transactions</h1>
-        <?php if (!empty($can_write)) { ?>
+        <?php if (!empty($can_write) && $kyb_ok) { ?>
             <a class="btn btn-primary" href="<?php echo site_url('business/transactions/saisir'); ?>">Saisir une opération</a>
         <?php } ?>
     </div>

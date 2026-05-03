@@ -145,5 +145,60 @@ class User_model extends CI_Model {
     public function count_users() {
         return $this->db->count_all($this->table);
     }
+
+    /**
+     * Normalise un numéro pour comparaison (chiffres uniquement).
+     */
+    public function normalize_phone_digits($raw) {
+        return preg_replace('/\D+/', '', (string) $raw);
+    }
+
+    /**
+     * Utilisateurs application dont le champ `phone` correspond au numéro saisi
+     * (égalité des chiffres ou même suffixe d’au moins 9 chiffres).
+     * Ne pas journaliser le numéro en clair dans des traces applicatives.
+     *
+     * @param string $raw
+     * @return array<int,array{id_utilisateur_application:int,phone:string|null}>
+     */
+    public function find_users_by_phone_match($raw) {
+        $digits = $this->normalize_phone_digits($raw);
+        if (strlen($digits) < 8) {
+            return array();
+        }
+        $suffix = substr($digits, -8);
+        $this->db->select('id_utilisateur_application, phone');
+        $this->db->from($this->table);
+        $this->db->where('phone IS NOT NULL', null, false);
+        $this->db->where('phone !=', '');
+        $this->db->group_start();
+        $this->db->like('phone', $suffix, 'before');
+        $this->db->or_like('phone', $digits, 'both');
+        $this->db->group_end();
+        $candidates = $this->db->get()->result_array();
+        $out = array();
+        $seen = array();
+        foreach ($candidates as $r) {
+            $rd = $this->normalize_phone_digits(isset($r['phone']) ? $r['phone'] : '');
+            if ($rd === '') {
+                continue;
+            }
+            $match = ($rd === $digits);
+            if (!$match && strlen($rd) >= 9 && strlen($digits) >= 9) {
+                $match = (substr($rd, -9) === substr($digits, -9));
+            }
+            if ($match) {
+                $id = (int) $r['id_utilisateur_application'];
+                if (!isset($seen[$id])) {
+                    $seen[$id] = true;
+                    $out[] = array(
+                        'id_utilisateur_application' => $id,
+                        'phone' => isset($r['phone']) ? $r['phone'] : null,
+                    );
+                }
+            }
+        }
+        return $out;
+    }
 }
 

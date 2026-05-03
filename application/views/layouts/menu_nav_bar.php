@@ -99,6 +99,11 @@
                         <a href="<?php echo site_url('Business_marchand_backoffice/index'); ?>"><b style="font-size:12px;"> <i class="fa fa-briefcase"></i> COMPTES MARCHANDS </b> </a>
                     </li>
                 <?php } ?>
+                <?php if (check_privilege('business_kyb', $this->session->user['id_role'], 'voir')) { ?>
+                    <li class="<?php echo isset($business_kyb_link_active) ? $business_kyb_link_active : ''; ?>">
+                        <a href="<?php echo site_url('Kyb_backoffice/index'); ?>"><b style="font-size:12px;"> <i class="fa fa-building"></i> KYB MARCHANDS </b> </a>
+                    </li>
+                <?php } ?>
                 <?php if (true) { ?>
                     <li>
                         <a href="<?php echo site_url('Starter/disconnect/'); ?>"><b class="center-text" style="font-size:12px;"> <i class="fa fa-sign-out"></i> DECONNEXION </b> </a>

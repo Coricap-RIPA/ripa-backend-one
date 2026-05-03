@@ -44,6 +44,16 @@ class Utilisateur_business_model extends CI_Model {
     }
 
     /**
+     * Compte administrateur principal d'un marchand.
+     */
+    public function get_admin_by_marchand($id_marchand) {
+        $this->db->where('id_marchand', (int) $id_marchand);
+        $this->db->where('role', 'administrateur');
+        $this->db->order_by('id', 'ASC');
+        return $this->db->get($this->table, 1)->row_array();
+    }
+
+    /**
      * Crée l’administrateur initial (appelé à la validation RIPA)
      */
     public function create_administrateur($id_marchand, $email_contact, $password_plain) {

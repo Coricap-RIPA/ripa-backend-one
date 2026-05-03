@@ -10,6 +10,7 @@ class Auth extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->config('business', true);
+        $this->load->library('JWT_Library');
     }
 
     public function login($error = '') {
@@ -48,6 +49,13 @@ class Auth extends CI_Controller {
             return;
         }
         $this->ub_model->update_row($row['id'], array('derniere_connexion' => date('Y-m-d H:i:s')));
+        $token = $this->jwt_library->encode(array(
+            'ub_id' => (int) $row['id'],
+            'id_marchand' => (int) $row['id_marchand'],
+            'role' => (string) $row['role'],
+            'exp' => time() + (7 * 24 * 60 * 60),
+            'iat' => time(),
+        ));
         $this->session->set_userdata(array(
             'business_ub_id' => (int) $row['id'],
             'business_marchand_id' => (int) $row['id_marchand'],
@@ -55,6 +63,7 @@ class Auth extends CI_Controller {
             'business_role' => $row['role'],
             'business_must_change_password' => !empty($row['doit_changer_mot_de_passe']),
             'business_logged_in' => true,
+            'business_api_jwt' => $token,
         ));
         if (!empty($row['doit_changer_mot_de_passe'])) {
             redirect('business/premier-mot-de-passe');
@@ -109,7 +118,7 @@ class Auth extends CI_Controller {
     public function logout() {
         $this->session->unset_userdata(array(
             'business_ub_id', 'business_marchand_id', 'business_email', 'business_role',
-            'business_must_change_password', 'business_logged_in',
+            'business_must_change_password', 'business_logged_in', 'business_api_jwt',
         ));
         redirect('business/connexion');
     }

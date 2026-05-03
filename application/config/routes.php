@@ -106,6 +106,39 @@ $route['api/config/commissions'] = 'api/config/get_commissions';
 $route['api/publicites'] = 'api/config/get_publicites';
 
 // ===========================
+// ROUTES API - BUSINESS (Portail marchand) — API-first
+// ===========================
+$route['api/business/auth/login'] = 'api/apibusiness/auth_login';
+$route['api/business/auth/me'] = 'api/apibusiness/auth_me';
+$route['api/business/register'] = 'api/apibusiness/register';
+$route['api/business/marchand'] = 'api/apibusiness/marchand_get';
+// Employés
+$route['api/business/employes'] = 'api/apibusiness/employes_index';
+$route['api/business/employes/create'] = 'api/apibusiness/employes_create';
+$route['api/business/employes/(:num)'] = 'api/apibusiness/employes_show/$1';
+$route['api/business/employes/(:num)/update'] = 'api/apibusiness/employes_update/$1';
+$route['api/business/employes/(:num)/delete'] = 'api/apibusiness/employes_delete/$1';
+// Services
+$route['api/business/services'] = 'api/apibusiness/services_index';
+$route['api/business/services/create'] = 'api/apibusiness/services_create';
+$route['api/business/services/(:num)'] = 'api/apibusiness/services_show/$1';
+$route['api/business/services/(:num)/update'] = 'api/apibusiness/services_update/$1';
+$route['api/business/services/(:num)/delete'] = 'api/apibusiness/services_delete/$1';
+// Transactions
+$route['api/business/transactions'] = 'api/apibusiness/transactions_index';
+$route['api/business/transactions/create'] = 'api/apibusiness/transactions_create';
+$route['api/business/transactions/(:num)'] = 'api/apibusiness/transactions_show/$1';
+$route['api/business/transactions/(:num)/delete'] = 'api/apibusiness/transactions_delete/$1';
+// KYB
+$route['api/business/kyb/dossier'] = 'api/apibusiness/kyb_delete';
+$route['api/business/kyb'] = 'api/apibusiness/kyb_get';
+$route['api/business/kyb/submit'] = 'api/apibusiness/kyb_submit';
+$route['api/business/kyb/submit-upload'] = 'api/apibusiness/kyb_submit_upload';
+// Comptes portail
+$route['api/business/portal-users'] = 'api/apibusiness/portal_users_index';
+$route['api/business/portal-users/create'] = 'api/apibusiness/portal_users_create';
+
+// ===========================
 // PORTAIL MARCHAND (B2B) — routes explicites (FR + chemins techniques CI)
 // ===========================
 $route['business'] = 'business/dashboard';
@@ -131,7 +164,16 @@ $route['business/employes'] = 'business/employes/index';
 $route['business/employes/ajouter'] = 'business/employes/add';
 $route['business/employes/modifier/(:num)'] = 'business/employes/edit/$1';
 $route['business/employes/supprimer/(:num)'] = 'business/employes/delete/$1';
+$route['business/employes/import'] = 'business/employes/import';
+$route['business/employes/modele-excel'] = 'business/employes/import_template';
+$route['business/employes/telephone-app-lookup'] = 'business/employes/phone_app_lookup';
 
 // Transactions
 $route['business/transactions'] = 'business/transactions/index';
 $route['business/transactions/saisir'] = 'business/transactions/add';
+
+// KYB (Know Your Business)
+$route['business/kyb'] = 'business/kyb/index';
+$route['business/kyb/soumettre'] = 'business/kyb/submit';
+$route['business/kyb/supprimer'] = 'business/kyb/supprimer';
+$route['business/kyb/piece/(:any)'] = 'business/kyb/piece/$1';

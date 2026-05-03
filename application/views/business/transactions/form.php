@@ -14,8 +14,14 @@
 <main class="ripa-portal-main">
 <div class="container">
     <h1 class="h3 mb-4">Saisir une opération</h1>
+    <?php if (empty($kyb_transactions_ok)) { ?>
+        <div class="alert alert-warning">
+            Les transactions ne sont pas autorisées sans dossier KYB approuvé et valide. <a class="alert-link" href="<?php echo site_url('business/kyb'); ?>">Dossier KYB</a>
+        </div>
+    <?php } ?>
     <?php if (!empty($error)) { ?><div class="alert alert-danger"><?php echo $error; ?></div><?php } ?>
     <div class="card p-4">
+        <?php if (!empty($kyb_transactions_ok)) { ?>
         <form method="post" action="">
             <?php echo ripa_portal_csrf_field(); ?>
             <div class="form-group">
@@ -71,6 +77,9 @@
             <button type="submit" class="btn btn-primary">Enregistrer</button>
             <a class="btn btn-link" href="<?php echo site_url('business/transactions'); ?>">Annuler</a>
         </form>
+        <?php } else { ?>
+            <a class="btn btn-secondary" href="<?php echo site_url('business/transactions'); ?>">Retour</a>
+        <?php } ?>
     </div>
 </div>
 </main>
